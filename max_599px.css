@@ -1,0 +1,36 @@
+tr {
+    display: block;
+  }
+
+thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+td {
+    display: block;
+    text-align: right !important;
+    position: relative !important;
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+}
+
+td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 359px){
+  .hero-details {
+      white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 399px){
+    .snippet__thumbnail {
+        display: none;
+    }
+}

@@ -7,6 +7,8 @@
     <title>Brighton Times</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 800px)" href="min_800px.css">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 599px)" href="max_599px.css">
   </head>
 
   <body>
@@ -33,10 +35,10 @@
     <main>
       <section class="content">
         <section class="hero">
-          <img class="hero-image" src="./images/dog.jpg">
-          <article class="description">
-            <h2>Absolutely astonishing breaking news!</h2>
-            <p>Organic raw denim Vice keffiyeh lomo Kickstarter art lomo Kickstarter art four loko. Organic raw denim Vice keffiyeh lomo Kickstarter art lomo Kickstarter art four loko.</p>
+          <img class="hero-image" src="./images/dog_1200w.jpg" srcset="images/dog_650w_crop.jpg 599w, images/dog_900w.jpg 800w" alt="hero dog">
+          <article>
+            <div><h2>Absolutely astonishing breaking news!</h2></div>
+            <p class="hero-details">Organic raw denim Vice keffiyeh lomo Kickstarter art lomo Kickstarter art four loko. Organic raw denim Vice keffiyeh lomo Kickstarter art lomo Kickstarter art four loko.</p>
           </article>
         </section>
 
@@ -62,47 +64,47 @@
           <table class="scores__table">
             <thead>
               <tr>
-                <th>date</th>
-                <th>team</th>
-                <th colspan="2">score</th>
-                <th>team</th>
+                <th scope="col">date</th>
+                <th scope="col">first team</th>
+                <th scope="col" colspan="2">score</th>
+                <th scope="col">second team</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Friday</td>
-                <td>Bears</td>
-                <td>95</td>
-                <td class="winner">109</td>
-                <td class="winner">Cubs</td>
+                <td data-label="date">Friday</td>
+                <td data-label="first team">Bears</td>
+                <td data-label="score">95</td>
+                <td data-label="score" class="winner">109</td>
+                <td data-label="second team" class="winner">Cubs</td>
               </tr>
               <tr>
-                <td>Friday</td>
-                <td class="winner">Otters</td>
-                <td class="winner">3</td>
-                <td>1</td>
-                <td>Cubs</td>
+                <td data-label="date">Friday</td>
+                <td data-label="first team" class="winner">Otters</td>
+                <td data-label="score" class="winner">3</td>
+                <td data-label="score">1</td>
+                <td data-label="second team">Cubs</td>
               </tr>
               <tr>
-                <td>Saturday</td>
-                <td class="winner">Wolves</td>
-                <td class="winner">7</td>
-                <td>0</td>
-                <td>Panthers</td>
+                <td data-label="date">Saturday</td>
+                <td data-label="first team" class="winner">Wolves</td>
+                <td data-label="score" class="winner">7</td>
+                <td data-label="score">0</td>
+                <td data-label="second team">Panthers</td>
               </tr>
               <tr>
-                <td>Sunday</td>
-                <td>Hawks</td>
-                <td>11</td>
-                <td class="winner">12</td>
-                <td class="winner">Capons</td>
+                <td data-label="date">Sunday</td>
+                <td data-label="first team">Hawks</td>
+                <td data-label="score">11</td>
+                <td data-label="score" class="winner">12</td>
+                <td data-label="second team" class="winner">Capons</td>
               </tr>
               <tr>
-                <td>Sunday</td>
-                <td class="winner">Stags</td>
-                <td class="winner">6</td>
-                <td>2</td>
-                <td>Foxes</td>
+                <td data-label="date">Sunday</td>
+                <td data-label="first team" class="winner">Stags</td>
+                <td data-label="score" class="winner">6</td>
+                <td data-label="score">2</td>
+                <td data-label="second team">Foxes</td>
               </tr>
 
             </tbody>
@@ -144,29 +146,29 @@
           <h2 class="news__title">Latest news <a href="#" class="news__more">+ more</a></h2>
           <ul>
             <li class="snippet">
-              <img class="snippet__thumbnail" src="images/dog.jpg" alt="picture of a girl with a large, stuffed dog toy">
+              <img class="snippet__thumbnail" src="images/dog_150w_crop.jpg" alt="picture of a girl with a large, stuffed dog toy">
               <h3 class="snippet__title"><a href="#">Gastropub distillery Marfa farm-to-table</a></h3>
-              <p>Gastropub distillery Marfa farm-to-table, Etsy Truffaut fingerstache.
+              <p class="block-with-text">Gastropub distillery Marfa farm-to-table, Etsy Truffaut fingerstache.
               Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four loko.Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four loko.Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four loko.
               </p>
             </li>
             <li class="snippet">
-              <img class="snippet__thumbnail" src="images/dog.jpg" alt="picture of a girl with a large, stuffed dog toy">
+              <img class="snippet__thumbnail" src="images/dog_150w_crop.jpg" alt="picture of a girl with a large, stuffed dog toy">
               <h3 class="snippet__title"><a href="#">Organic raw keffiyeh four loko.</a></h3>
-              <p>Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four loko.Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice loko.
+              <p class="block-with-text">Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four loko.Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice loko.
               </p>
             </li>
             <li class="snippet">
-              <img class="snippet__thumbnail" src="images/dog.jpg" alt="picture of a girl with a large, stuffed dog toy">
+              <img class="snippet__thumbnail" src="images/dog_150w_crop.jpg" alt="picture of a girl with a large, stuffed dog toy">
               <h3 class="snippet__title"><a href="#">Kickstarter art party cronut scenester.</a></h3>
-              <p>Gastropub distillery Marfa farm-to-table, Etsy Truffaut fingerstache.
+              <p class="block-with-text">Gastropub distillery Marfa farm-to-table, Etsy Truffaut fingerstache.
               Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four loko.Vice keffiyeh four loko.
               </p>
             </li>
             <li class="snippet">
-              <img class="snippet__thumbnail" src="images/dog.jpg" alt="picture of a girl with a large, stuffed dog toy">
+              <img class="snippet__thumbnail" src="images/dog_150w_crop.jpg" alt="picture of a girl with a large, stuffed dog toy">
               <h3 class="snippet__title"><a href="#">Squid lomo Kickstarter art party cronut </a></h3>
-              <p>Gastropub distillery Marfa farm-to-table, Etsy Truffaut fingerstache.
+              <p class="block-with-text">Gastropub distillery Marfa farm-to-table, Etsy Truffaut fingerstache.
               Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four loko.Vice keffiyeh four loko.
               </p>
             </li>
